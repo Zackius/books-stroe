@@ -1,0 +1,32 @@
+.inputAdd{
+    height: 400px;
+    width: 700px;
+background-color: rgb(244, 216, 181);
+    color:black;
+  padding-left: 800px;
+}
+.main{
+justify-content: center;
+}
+.list input{
+    display: block;
+}
+.gap{
+    padding:20px;
+    border-radius: 20px;
+}
+h4{
+    font-weight: 700;
+
+}
+.btn{
+    padding:20px;
+;
+}
+
+button{
+    background-color: black;
+    color: yellow;
+    font-size: large;
+    padding:10px;
+}

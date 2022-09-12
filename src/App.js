@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import Books from "./Components/Books";
+import Add from "./Components/Add";
 
 function App() {
+  // const [books, setBooks] = useState([])
+
+  // useEffect(() => {
+  //   const fetchBooks = async () => {
+  //     const { data } = await bookApi.get("/books");
+  //     setBooks(data)
+  //   }
+  //   fetchBooks()
+  // }, [])
+  // const addBook = async (newBooks) => {
+  //   const { data } = await bookApi.post("/books", newBooks);
+  //   setBooks((prevBooks) => {
+  //     return [...prevBooks, data]
+  //   })
+  // }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <Books />
+      <Add />
     </div>
   );
 }

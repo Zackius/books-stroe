@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus&display=swap');
+
+.logo{
+    font-family: 'Gentium Plus', serif;
+    font-weight: 700;
+        font-size: 20px;
+}
+.navbar{
+    background-color:rgb(138, 138, 137);
+    height: 50px;
+  padding: 20px;
+}
+.nav-link{
+    padding-left: 600px;
+    color: black;
+        font-family: 'Gentium Plus', serif;
+        font-weight: 700;
+        font-size: 20px;
+        border-bottom: 0px;
+        justify-content: space-between;
+       
+    
+}
+div a{
+    padding: 40px;
+    color: black;
+}
+div input {
+   padding: 10px;
+   margin:5px
+}

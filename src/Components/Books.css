@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus&display=swap');
+
+img{
+    width: 400px;
+    height: 600px;
+}
+button{
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.main{
+
+display: flex;
+background-color: aliceblue;
+}
+.main div{
+    padding: 20px;
+    flex-wrap: wrap;
+ 
+}
+
