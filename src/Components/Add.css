@@ -1,6 +1,9 @@
+body{
+    background-color: white;
+}
 .inputAdd{
-    height: 400px;
-    width: 700px;
+    height: 700px;
+    width: 400px;
 background-color: rgb(244, 216, 181);
     color:black;
   padding-left: 800px;
@@ -25,8 +28,7 @@ h4{
 }
 
 button{
-    background-color: black;
-    color: yellow;
     font-size: large;
     padding:10px;
+    border-radius: 16px;
 }

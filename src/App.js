@@ -2,6 +2,7 @@ import "./App.css";
 import Navbar from "./Components/Navbar";
 import Books from "./Components/Books";
 import Add from "./Components/Add";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   // const [books, setBooks] = useState([])
@@ -23,8 +24,10 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Books />
-      <Add />
+      <Routes>
+        <Route path="books" element={<Books />} />
+        <Route path="add" element={<Add />} />
+      </Routes>
     </div>
   );
 }
