@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Add from "./Add";
+import { Link } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
-
 import axios from "axios";
 import "./Books.css";
 
@@ -9,10 +8,18 @@ const Books = () => {
   const [books, setBooks] = useState([]);
   const [editForm, setEditForm] = useState(false);
 
-  function hnadleChanges(e) {
+
+  function handleChanges(e) {
     if (e) {
       setEditForm(() => !editForm);
     }
+    // fetch(`http://localhost:9292/books/${e.target.id}`, {
+    //   method: "PATCH",
+    //   headers: {
+    //     "Conteent-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(),
+    // }).then((resp) => resp.json());
   }
 
   function handleDelete(id) {
@@ -54,9 +61,21 @@ const Books = () => {
             >
               Delete
             </button>
-            <button>
-            <Route path="add" element={<Add />} />
+            <button onClick={handleChanges} className="edit-button">
+              Edit
             </button>
+            <div>
+              {
+                handleChanges && (
+                  <form>
+                <input type="text" />
+                <input type="text" />
+                    <input type="text" />
+                    
+              </form>
+                )
+              }
+            </div>
           </div>
         );
       })}

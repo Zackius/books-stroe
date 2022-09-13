@@ -22,4 +22,19 @@ background-color: aliceblue;
 #hide-form{
     display: none;
 }
+button {
+    min-width: 130px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #57cc99;
+    background: #57cc99;
+}
 
