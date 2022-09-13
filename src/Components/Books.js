@@ -1,9 +1,17 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "./Books.css";
 
 const Books = () => {
   const [books, setBooks] = useState([]);
+  const [editForm, setEditForm] = useState(false);
+
+  function hnadleChanges(e) {
+    if (e) {
+      setEditForm(() => !editForm);
+    }
+  }
 
   function handleDelete(id) {
     if (window.confirm("Are you sure you want to delete this book?")) {
@@ -44,7 +52,9 @@ const Books = () => {
             >
               Delete
             </button>
-            <button>Edit</button>
+            <button>
+              <Link to="add">Edit</Link>
+            </button>
           </div>
         );
       })}
