@@ -1,25 +1,26 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { Routes, Route } from "react-router-dom";
+
 import axios from "axios";
 import "./Books.css";
+import EditForm from "./EditForm";
 
 const Books = () => {
   const [books, setBooks] = useState([]);
   const [editForm, setEditForm] = useState(false);
+  const []
 
 
-  function handleChanges(e) {
+  function handleChanges(e, id) {
     if (e) {
       setEditForm(() => !editForm);
     }
-    // fetch(`http://localhost:9292/books/${e.target.id}`, {
-    //   method: "PATCH",
-    //   headers: {
-    //     "Conteent-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(),
-    // }).then((resp) => resp.json());
+    fetch(`http://localhost:9292/books/${e.target.id}`, {
+      method: "PATCH",
+      headers: {
+        "Conteent-Type": "application/json",
+      },
+      body: JSON.stringify(),
+    }).then((resp) => resp.json());
   }
 
   function handleDelete(id) {
@@ -61,20 +62,8 @@ const Books = () => {
             >
               Delete
             </button>
-            <button onClick={handleChanges} className="edit-button">
-              Edit
-            </button>
-            <div>
-              {
-                handleChanges && (
-                  <form>
-                <input type="text" />
-                <input type="text" />
-                    <input type="text" />
-                    
-              </form>
-                )
-              }
+            <div id="hide-form">
+              {editForm? <EditForm id ={id} /> : <button className="button" onClick={handleChanges} id ={id}>Edit</button>}
             </div>
           </div>
         );
