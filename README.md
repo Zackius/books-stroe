@@ -1,6 +1,5 @@
-# Library App 
-Simple overview of use/purpose.
-A simple library aplication that can be used in storing your books.  
+# Book-Store
+A simple book store  aplication that can be used in storing your books.  
 
 
 ## Description
