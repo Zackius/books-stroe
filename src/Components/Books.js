@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import Add from "./Add";
+import { Routes, Route } from "react-router-dom";
+
 import axios from "axios";
 import "./Books.css";
 
@@ -53,7 +55,7 @@ const Books = () => {
               Delete
             </button>
             <button>
-              <Link to="add">Edit</Link>
+            <Route path="add" element={<Add />} />
             </button>
           </div>
         );
