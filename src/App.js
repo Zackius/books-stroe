@@ -28,6 +28,7 @@ function App() {
         <Route path="books" element={<Books />} />
         <Route path="add" element={<Add />} />
       </Routes>
+      <h3>Welcome to Soma</h3>
     </div>
   );
 }
